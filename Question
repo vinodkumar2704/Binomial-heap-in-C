@@ -1,0 +1,61 @@
+Write a program to implement a Binomial Heap and perform the operations insertion, deletion,
+extract minimum and union. Your program should contain the following functions:
+
+• MakeHeap() - Creates and returns a new heap H containing no elements.
+• Insert(H, x) – Inserts a new node with key ‘x’ into the heap H.
+• Minimum(H) – Return the value of the smallest key in the heap H.
+• ExtractMin(H) – Deletes the node with minimum key value from heap H.
+• DecreaseKey(H, x, k) – If the node of H with key ‘x’ is at least ‘k’, then decreases the
+value of node with key ‘x’ by ‘k’. Otherwise, it print -1.
+• Delete(H, x) - Deletes the node with key ‘x’ from the heap H. If node is not present, then
+print -1.
+• Union(H1, H2) - Create and return a new heap H that contains all the nodes of heaps H1
+and H2. Heaps H1 and H2 are “destroyed” by this operation.
+
+
+
+
+
+Input Format:
+• Each line contains a character from ‘i’, ‘m’, ‘x’, ‘r’, ‘d’ and ‘e’ followed by at most one integer.
+The integers, if given, are in the range [−106, 106].
+• i k - inserts k into the heap
+• d k - deletes node k from the heap
+• p - prints the binomial heap
+• m - prints the minimum element in the binomial heap (Note:- In print function, level order
+traversal is to be used).
+• x - extracts the minimum element from the heap
+• r y z - decreases the value of node with key y by z.
+• e - ‘exit’ from the program.
+
+
+Output Format:
+• The output (if any) of each command should be printed on a separate line.
+
+
+
+
+
+Sample Input:
+i 10
+i 20
+i 30
+i 40
+i 50
+p
+m
+x
+p
+r 50 4
+p
+r 70 5
+
+Sample Output:
+50 10 30 20 40
+10
+10
+20 30 40 50
+46
+20 30 40 46
+-1
+
